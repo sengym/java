@@ -1,0 +1,74 @@
+package arrays;
+
+import java.util.ArrayList;
+
+public class ordersarray_own {
+	
+	static void QABucks() {
+		// Create an Array List for OrdersArray
+		ArrayList<String> OrdersArray = new ArrayList<>();
+		
+		// add - Add items in the arraylist 
+		OrdersArray.add("0.Small Espresso w/ Chocolate");
+		OrdersArray.add("1. Large Cold Brew w/ double shot");
+		OrdersArray.add("2. Medium Cappucino w/ Oat Milk");
+		OrdersArray.add("3. Medium Flat White");
+		OrdersArray.add("4. Large Choc Cookie Frappe w/ sugar free syrup");
+		OrdersArray.add("5. Small Caramel Iced Latte w/ honeycomb dust");
+		OrdersArray.add("6. Small Americano");
+		OrdersArray.add("7. Large Cafe Au Lait w/ extra milk");
+		OrdersArray.add("8. Medium Strawberry Iced Tea");
+		
+		// return - name of the order 
+		System.out.println(OrdersArray);
+		System.out.println("============================");
+		System.out.println("Order number 5 - " +OrdersArray.get(5));
+		
+		// modify - the order 
+		OrdersArray.set(3,"3. Medium Cappucino w/ Whole Milk");
+		System.out.println("============================");
+		System.out.println("Changed order -" +OrdersArray);
+		
+		// Create an Array List for DoneOrdersArray
+		ArrayList<String> DoneOrdersArray = new ArrayList<>();
+		
+		// add - Add items in the DoneOrderArrary
+		DoneOrdersArray.add(OrdersArray.get(0));
+		DoneOrdersArray.add(OrdersArray.get(1));
+		System.out.println(DoneOrdersArray);
+		System.out.println("============================");
+		
+		// remove - from the array
+		OrdersArray.remove(0);
+		OrdersArray.remove(0);
+		
+		// print - length of orders and done orders
+		System.out.println("Orders Left - " +OrdersArray);
+		System.out.println("============================");
+		System.out.println("No. of Orders Left - " +OrdersArray.size());
+		System.out.println("No. of Orders Done - " +DoneOrdersArray.size());
+		
+		// add - Add all orders to done orders
+		DoneOrdersArray.add(OrdersArray.get(0));
+		DoneOrdersArray.add(OrdersArray.get(1));
+		DoneOrdersArray.add(OrdersArray.get(2));
+		DoneOrdersArray.add(OrdersArray.get(3));
+		DoneOrdersArray.add(OrdersArray.get(4));
+		DoneOrdersArray.add(OrdersArray.get(5));
+		DoneOrdersArray.add(OrdersArray.get(6));
+		
+		// clear - clear orders arrays
+		OrdersArray.clear();
+		System.out.println("=============================");
+		System.out.println("Orders Done - " +DoneOrdersArray);
+		System.out.println("Orders Left - " +OrdersArray);
+
+		// print - FINAL length of orders and done orders
+		System.out.println("============================");
+		System.out.println("No. of orders left -" +OrdersArray.size());
+		System.out.println("No. of orders done -" +DoneOrdersArray.size());
+		
+		
+	}
+
+}
